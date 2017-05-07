@@ -3,6 +3,9 @@
     <app-header></app-header>
     <img src="./assets/logo.png">
     <router-view></router-view>
+    <footer>
+      <app-header></app-header>
+    </footer>
   </div>
 </template>
 
