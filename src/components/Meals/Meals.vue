@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>View your meals</h1>
+        <h1>Your meals</h1>
         <another-Meal v-for="meal in meals" :meal="meal"></another-Meal>
     </div>
 </template>

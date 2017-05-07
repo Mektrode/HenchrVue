@@ -1,7 +1,6 @@
 <template>
   <div>
     <app-header></app-header>
-    <img src="./assets/logo.png">
     <router-view></router-view>
     <footer>
       <app-header></app-header>
@@ -13,9 +12,9 @@
 import appHeader from './components/appHeader.vue'
 
 export default {
-  components: {
-    appHeader: appHeader
-  }
+    components: {
+        appHeader: appHeader
+    }
 }
 </script>
 
