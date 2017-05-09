@@ -8,6 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var manifestPlugin = require('pwa-manifest-webpack-plugin')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -94,7 +95,18 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new manifestPlugin({
+      name: 'Henchr',
+      description: 'Henchr - Count what matters.',
+      display: 'fullscreen',
+      background_color: '#EA3A3A',
+      theme_color: '#EA3A3A',
+      icon: {
+        src: path.resolve('src/assets/hensh1.png'),
+        sizes: [200]
+      }
+    }),
   ]
 })
 

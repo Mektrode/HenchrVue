@@ -1,7 +1,7 @@
 {
   "name": "henchr",
   "version": "1.0.0",
-  "description": "Get Henchh ",
+  "description": "Get Henchh",
   "author": "MH",
   "private": true,
   "scripts": {
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "vue": "^2.2.6",
-    "vue-router": "^2.3.1"
+    "vue-router": "^2.3.1",
+    "pwa-manifest-webpack-plugin": "1.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

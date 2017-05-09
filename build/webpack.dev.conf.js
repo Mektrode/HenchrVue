@@ -5,6 +5,8 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+var path = require('path')
+var manifestPlugin = require('pwa-manifest-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -29,6 +31,17 @@ module.exports = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true
+    }),
+    new manifestPlugin({
+      name: 'Henchr',
+      description: 'Henchr - Count what matters.',
+      display: 'fullscreen',
+      background_color: '#EA3A3A',
+      theme_color: '#EA3A3A',
+      icon: {
+        src: path.resolve('src/assets/hensh1.png'),
+        sizes: [200]
+      }
     }),
     new FriendlyErrorsPlugin()
   ]
