@@ -5,7 +5,9 @@ import VueRouter from 'vue-router'
 
 import App from './App'
 import {routes} from './routes'
-
+import Vuetify from 'vuetify'
+ 
+Vue.use(Vuetify)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
