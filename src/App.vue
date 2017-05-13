@@ -6,15 +6,20 @@
       <main>
         <router-view></router-view>
       </main>
+      <footer>
+        <appFooter></appFooter>
+      </footer>
   </div>
 </template>
 
 <script>
 import appHeader from './components/appHeader.vue'
+import appFooter from './components/appFooter.vue'
 
 export default {
     components: {
-        appHeader: appHeader
+        appHeader: appHeader,
+        appFooter: appFooter
     }
 }
 </script>

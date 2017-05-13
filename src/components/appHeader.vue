@@ -1,11 +1,8 @@
 <template>
 <div>
-            <router-link to="/">Home</router-link>
-
-            <router-link to="/Meals">Meals</router-link>
-
-            <router-link to="/newMeal">New Meal</router-link>
-
+    <h1>{{ $route.params.title }}</h1>
+    <router-link to="/newMeal">New Meal</router-link>
+    <router-link to="/Weight">Update Weight</router-link>
 </div>
 </template>
 
