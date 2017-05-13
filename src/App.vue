@@ -26,7 +26,6 @@
 
 <script>
 import appHeader from './components/appHeader.vue'
-import 'vuetify/dist/vuetify.min.css'
 
 export default {
     components: {
