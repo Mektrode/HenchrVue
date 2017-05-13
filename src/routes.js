@@ -5,9 +5,9 @@ import Stats from './components/Stats.vue'
 import Weight from './components/gather/Weight.vue'
 
 export const routes = [
-    { path: '/', component: Home, params: { title: 'Home' } },
-    { path: '/newMeal', component: newMeal, params: { title: 'New Meal' } },
-    { path: '/Weight', component: Weight },
-    { path: '/Meals', component: Meals },
-    { path: '/Stats', component: Stats }
+    { path: '/', component: Home, name: 'Home' },
+    { path: '/newMeal', component: newMeal, name: 'New Meal' },
+    { path: '/Weight', component: Weight, name: 'Update Weight' },
+    { path: '/Meals', component: Meals, name: 'Meals' },
+    { path: '/Stats', component: Stats, name: 'Stats' }
 ]
