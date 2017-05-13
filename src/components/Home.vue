@@ -14,7 +14,7 @@ import mealL from './Meals/Meals.vue'
 export default {
     data () {
         return {
-            msg: 'countCalories() THEN getHench()'
+            msg: 'Home'
         }
     },
     components: {
