@@ -11,6 +11,19 @@ import {routes} from './routes'
 Vue.use(VueRouter)
 Vue.use(VueMaterial)
 
+Vue.material.registerTheme({
+    'default': {
+        primary: 'red',
+        accent: 'purple',
+        warn: 'purple',
+        background: 'white'
+    },
+    footer: {
+        primary: 'purple',
+        accent: 'purple'
+    }
+})
+
 const router = new VueRouter({
     mode: 'history',
     routes

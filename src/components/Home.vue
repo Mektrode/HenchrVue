@@ -1,10 +1,17 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <img src="../assets/logo.png">
-    <h2>Ecosystem</h2>
-    <hr>
+    <md-theme>
+    <md-layout md-gutter>
+      <md-layout md-flex="50" md-flex-offset="25">
+        <center>
+        <h1>{{ msg }}</h1>
+        <md-spinner :md-size="170" :md-stroke="3.2" :md-progress="43">43%</md-spinner>
+        <h2>Ecosystem</h2>
+        </center>
+      </md-layout>
+    </md-layout>
     <meal-List></meal-List>
+    </md-theme>
   </div>
 </template>
 
@@ -14,7 +21,7 @@ import mealL from './Meals/Meals.vue'
 export default {
     data () {
         return {
-            msg: 'Home'
+            msg: 'Welcome'
         }
     },
     components: {
