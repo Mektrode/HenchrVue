@@ -1,7 +1,7 @@
 <template>
 <div>
   <md-toolbar class="md-medium md-transparent">
-    <md-button class="md-icon-button" @click.native="$refs.sidenav.toggle()">
+    <md-button class="md-icon-button" @click="toggle()">
       <md-icon>menu</md-icon>
     </md-button>
     <h1 class="md-title" style="flex: 1">{{ $route.name }}</h1>

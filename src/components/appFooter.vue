@@ -2,9 +2,9 @@
 <div>
     <md-theme md-name="footer">
     <md-bottom-bar>
-      <md-bottom-bar-item md-iconset="icon-speedometer"><router-link to="/Stats">Stats</router-link></md-bottom-bar-item>
-      <md-bottom-bar-item md-iconset="icon-home" md-active><router-link to="/">Home</router-link></md-bottom-bar-item>
-      <md-bottom-bar-item md-iconset="icon-layers"><router-link to="/Meals">Meals</router-link></md-bottom-bar-item>
+      <md-bottom-bar-item md-iconset="icon-speedometer" @click.native="$router.push({ name: 'Stats' })">Stats</md-bottom-bar-item>
+      <md-bottom-bar-item md-iconset="icon-home" @click.native="$router.push({ name: 'Home' })" md-active>Home</md-bottom-bar-item>
+      <md-bottom-bar-item md-iconset="icon-layers" @click.native="$router.push({ name: 'Meals' })">Meals</md-bottom-bar-item>
     </md-bottom-bar>
     </md-theme>
 </div>

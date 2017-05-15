@@ -7,7 +7,7 @@ A Javascript (Node.js) PWA (Progressive Web App) built with MongoDB, Express.js 
 ## Vue tools
 
 - Vuex for State Management: https://github.com/vuejs/vuex
-- Vuetify for Material Design look: https://vuetifyjs.com/
+- Vue Material library for a responsive Material Design UI: https://vuematerial.github.io/
 
 ## Models
 
