@@ -6,7 +6,7 @@
     </md-button>
     <h1 class="md-title" style="flex: 1">{{ $route.name }}</h1>
     
-    <md-speed-dial md-open="hover" md-direction="left" class="md-fab-top-right" md-theme="red">
+    <md-speed-dial md-open="click" md-direction="left" class="md-fab-top-right" md-theme="red">
       <md-button class="md-fab" md-fab-trigger>
         <md-icon md-icon-morph>close</md-icon>
         <md-icon>add</md-icon>
