@@ -12,7 +12,17 @@
         data () {
             return {
                 meals: [
-                    {id: 1, name: 'Oats Shake', category: 'Breakfast', calories: 380, carbs: 120, prot: 29, calrPerc: 2},
+                    {
+                        id: 1, 
+                        name: 'Oats Shake', 
+                        category: 'Breakfast',
+                        stats: {
+                            calories: 380, 
+                            carbs: 120, 
+                            prot: 29, 
+                            calrPerc: 2
+                        }
+                    },
                     {id: 2, name: 'Meal Deal', category: 'Lunch', calories: 704, carbs: 230, prot: 67, calrPerc: 22},
                     {id: 3, name: 'Bueno', category: 'Snack', calories: 89, carbs: 3, prot: 0.9, calrPerc: 19},
                     {id: 4, name: 'Jerk Rice', category: 'Dinner', calories: 405, carbs: 120, prot: 24, calrPerc: 900},
