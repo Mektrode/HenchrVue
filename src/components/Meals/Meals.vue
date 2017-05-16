@@ -20,7 +20,9 @@
                             calories: 380, 
                             carbs: 120, 
                             prot: 29, 
-                            calrPerc: 2
+                            calrPerc: 2,
+                            proPerc: 20,
+                            carbPerc: 31
                         }
                     },
                     {id: 2, name: 'Meal Deal', category: 'Lunch', calories: 704, carbs: 230, prot: 67, calrPerc: 22},
