@@ -1,7 +1,7 @@
 <template>
 <div>
   <md-toolbar class="md-medium md-transparent">
-    <md-button class="md-icon-button" @click="toggle()">
+    <md-button class="md-icon-button" @click.native="toggle()">
       <md-icon>menu</md-icon>
     </md-button>
     <h1 class="md-title" style="flex: 1">{{ $route.name }}</h1>
@@ -26,9 +26,18 @@
 
 <script>
 export default {
+    data: {
+        return: {
+            status: false
+        }
+    },
     methods: {
-        toggle: function () {
-            this.$refs.sidenav.open()
+        toggle: function (status) {
+            this.status = !this.status
+            console.log('appHeader export toggle is now ' + this.status)
+            // if (this.status)
+            // this.$refs.sidenav.open()
+            this.$emit('toggle', [this.status])
         }
     }
 }

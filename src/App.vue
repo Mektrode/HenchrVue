@@ -1,12 +1,12 @@
 <template>
   <div>
       <header>
-        <app-header v-on:toggle="open"></app-header>
+        <app-header v-on:toggle="openStatus"></app-header>
       </header>
       <main>
         <router-view></router-view>
       </main>
-      <app-sidebar :open="openSidenav"></app-sidebar>
+      <app-sidebar></app-sidebar>
       <footer>
         <appFooter></appFooter>
       </footer>
@@ -21,19 +21,20 @@ import appFooter from './components/appFooter.vue'
 export default {
     data () {
         return {
-            openSidenavState: true
+            // openSidenavState: true
         }
     },
     methods: {
-        open () {
-            this.openSidenavState = !this.openSidenavState
+        openStatus (status) {
+            console.log('from app.vue status is... ' + status)
         }
     },
-    computed: {
-        openSidenav () {
-            return this.openSidenavState
+    /* computed: {
+        openit (status) {
+            console.log('from app.vue status is... ' + status)
+            // return this.$emit('update:open', status)
         }
-    },
+    }, */
     components: {
         appHeader: appHeader,
         appSidebar: appSidebar,
