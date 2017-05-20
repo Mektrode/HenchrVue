@@ -1,7 +1,7 @@
 <template>
   <div>
       <header>
-        <app-header v-on:toggle="openStatus"></app-header>
+        <app-header v-on:toggle="openit"></app-header>
       </header>
       <main>
         <router-view></router-view>
@@ -29,12 +29,12 @@ export default {
             console.log('from app.vue status is... ' + status)
         }
     },
-    /* computed: {
-        openit (status) {
-            console.log('from app.vue status is... ' + status)
+    computed: {
+        openit () {
+            console.log('from app.vue status is... ' + this.status)
             // return this.$emit('update:open', status)
         }
-    }, */
+    }, 
     components: {
         appHeader: appHeader,
         appSidebar: appSidebar,
