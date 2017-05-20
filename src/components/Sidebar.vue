@@ -1,6 +1,6 @@
 <template>
     <div>
-      <md-sidenav md-theme="red" class="md-left" ref="sidenav" :md-visible="open">
+      <md-sidenav md-theme="red" class="md-left" ref="openSidenav" md-visible="openSidenav" md-swipable="true" @open="open('Left')" @close="close('Left')">
         <md-toolbar class="md-account-header">
           <md-list class="md-transparent">
             <md-list-item class="md-avatar-list">
@@ -59,9 +59,9 @@
 
 <script>
 export default {
-    props: ['open'],
     data () {
         return {
+            openSidenav: this.$store.state.openSidenav
         }
     }
 }

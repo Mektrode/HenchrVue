@@ -3,12 +3,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueMaterial from 'vue-material'
-import axios from 'axios'
+// import axios from 'axios'
 
 import 'vue-material/dist/vue-material.css'
 import App from './App'
 import {routes} from './routes'
-import store from './store'
+import store from './store/store.js'
 
 Vue.use(VueRouter)
 Vue.use(VueMaterial)

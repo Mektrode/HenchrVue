@@ -38,7 +38,7 @@ export default {
             // if (this.status)
             // this.$refs.sidenav.open()
             this.$emit('toggle', [this.status])
-            this.$store.commit('toggleSidenav')
+            this.$store.dispatch('toggleSidenav')
         }
     }
 }

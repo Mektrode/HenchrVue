@@ -1,12 +1,12 @@
 <template>
   <div>
       <header>
-        <app-header v-on:toggle="openit"></app-header>
+        <app-header v-on:toggle="openStatus"></app-header>
       </header>
       <main>
         <router-view></router-view>
       </main>
-      <app-sidebar></app-sidebar>
+      <app-sidebar :openy=true></app-sidebar>
       <footer>
         <appFooter></appFooter>
       </footer>
@@ -26,15 +26,17 @@ export default {
     },
     methods: {
         openStatus (status) {
-            console.log('from app.vue status is... ' + status)
+            console.log('from ap1231231p.vue status is... ' + status)
         }
     },
     computed: {
         openit () {
+            // for computed values cannot pass parameters so use this.status instead
             console.log('from app.vue status is... ' + this.status)
             // return this.$emit('update:open', status)
+            // this.$refs.leftSidenav.toggle()
         }
-    }, 
+    },
     components: {
         appHeader: appHeader,
         appSidebar: appSidebar,
