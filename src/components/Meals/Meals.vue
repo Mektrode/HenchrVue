@@ -7,13 +7,12 @@
 
 <script>
     import MealW from './aMeal.vue'
-    import { mapState } from 'vuex'
 
     export default {
         computed: {
-          projects () {
-            return this.$store.state.meals
-          }
+            meals () {
+                return this.$store.state.meals
+            }
         },
         components: {
             anotherMeal: MealW
