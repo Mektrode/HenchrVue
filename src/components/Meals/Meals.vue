@@ -11,7 +11,7 @@
     export default {
         computed: {
             meals () {
-                return this.$store.state.meals
+                return this.$store.getters.mealsNow
             }
         },
         components: {
