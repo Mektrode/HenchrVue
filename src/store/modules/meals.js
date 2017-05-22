@@ -77,6 +77,7 @@ const state = {
 const actions = {
     adddmeal: function ({ commit }, meal) {
         commit('ADD_meal', meal)
+        console.log('added ' + meal.name)
     }
 }
 

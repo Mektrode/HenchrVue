@@ -21,15 +21,16 @@ export default {
             alert('You submitted: ' + this.mealName + ': ' + this.mealCal + 'kJ , with ' + this.mealCarb + 'g of CARBS, ' + this.mealProt + 'g of PROT')
         },
         addameal (mealName, mealCal, mealCarb, mealProt) {
-            /* const meal = {
-                mealName: this.meal.name,
-                mealCal: this.meal.info.calories,
-                mealCarb: this.meal.info.carbs,
-                mealProt: this.meal.info.prot
-            } */
-            this.$store.dispatch('adddmeal', {mealName, mealCal, mealCarb, mealProt})
+            const meal = {
+                name: this.mealName,
+                info: {
+                    calories: this.mealCal,
+                    carbs: this.mealCarb,
+                    prot: this.mealProt
+                }
+            }
+            this.$store.dispatch('adddmeal', meal)
         }
     }
-
 }
 </script>
