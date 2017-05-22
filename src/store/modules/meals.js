@@ -1,8 +1,40 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 const state = {
+    // examples
     meals: [
         {
+            id: 1,
+            name: 'A Shake',
+            category: 'Breakfast',
+            inside: {
+            },
+            info: {
+                calories: 704,
+                carbs: 230,
+                prot: 67,
+                calrPerc: this.calories / 2000,
+                carbPerc: this.carbs / 300,
+                protPerc: this.prot / 130
+            }
+        },
+        {
+            id: 2,
+            name: 'Oreos',
+            category: 'Snack',
+            inside: {
+            },
+            info: {
+                calories: 54,
+                carbs: 13,
+                prot: 7,
+                calrPerc: this.calories / 2000,
+                carbPerc: this.carb / 300,
+                protPerc: this.pro / 130
+
+            }
+        }
+        /* extra meals batches {
             id: 21,
             name: 'Meal Deal',
             category: 'Lunch',
@@ -30,7 +62,7 @@ const state = {
                     carbPerc: 2
                 }
             },
-            stats: {
+            info: {
                 calories: 704,
                 carbs: 230,
                 prot: 67,
@@ -38,44 +70,52 @@ const state = {
                 proPerc: 42,
                 carbPerc: 51
             }
-        }
+        } */
     ]
 }
 
 const actions = {
-    LOAD_meal_LIST: function ({ commit }) {
-        axios.get('/secured/meals').then((response) => {
-            commit('SET_meal_LIST', { list: response.data })
-        }, (err) => {
-            console.log(err)
-        })
-    },
-    ADD_NEW_meal: function ({ commit }) {
-        axios.post('/secured/meals').then((response) => {
-            commit('ADD_meal', { meal: response.data })
-        }, (err) => {
-            console.log(err)
-        })
+    adddmeal: function ({ commit }, meal) {
+        commit('ADD_meal', meal)
     }
 }
 
 const mutations = {
-    SET_meal_LIST: (state, { list }) => {
+    /* SET_meal_LIST: (state, { list }) => {
         state.meals = list
-    },
-    ADD_meal: (state, { meal }) => {
-        state.meals.push(meal)
-    },
-    UPDATE_meal: (state, { item }) => {
+    }, */
+    ADD_meal: (state, { mealName, mealCal, mealCarb, mealProt }) => {
+        state.meals.push({
+            name: mealName,
+            info: {
+                calories: mealCal,
+                carbs: mealCarb,
+                prot: mealProt
+            }
+        })
+    }
+    /* UPDATE_meal: (state, { item }) => {
         let idx = state.meals.map(p => p.id).indexOf(item.id)
         state.meals.splice(idx, 1, item)
-    }
+    } */
 }
 
 const getters = {
     mealCount: state => {
         return state.meals.length
+    },
+    mealsNow: state => {
+        return state.meals
     }
+    /* mealsYesterday: state => {
+        return state.meals
+    },
+    mealsDayBefore: state => {
+        return state.meals
+    },
+    mealsDayBeforeThat: state => {
+        return state.meals
+    } */
 }
 
 export default {
