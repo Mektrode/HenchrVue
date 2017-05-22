@@ -77,7 +77,7 @@ const state = {
 const actions = {
     adddmeal: function ({ commit }, meal) {
         commit('ADD_meal', meal)
-        console.log('added ' + meal.name)
+        console.log('added ' + meal.name + ' which has calories of ' + meal.info.calories)
     }
 }
 
@@ -85,13 +85,13 @@ const mutations = {
     /* SET_meal_LIST: (state, { list }) => {
         state.meals = list
     }, */
-    ADD_meal: (state, { mealName, mealCal, mealCarb, mealProt }) => {
+    ADD_meal: (state, meal) => {
         state.meals.push({
-            name: mealName,
+            name: meal.name,
             info: {
-                calories: mealCal,
-                carbs: mealCarb,
-                prot: mealProt
+                calories: meal.info.calories,
+                carbs: meal.info.carbs,
+                prot: meal.info.prot
             }
         })
     }
