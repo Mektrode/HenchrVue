@@ -13,9 +13,9 @@ const state = {
                 calories: 704,
                 carbs: 230,
                 prot: 67,
-                calrPerc: this.calories / 2000,
-                carbPerc: this.carbs / 300,
-                protPerc: this.prot / 130
+                calrPerc: 43,
+                carbPerc: 79,
+                protPerc: 59
             }
         },
         {
@@ -28,9 +28,9 @@ const state = {
                 calories: 54,
                 carbs: 13,
                 prot: 7,
-                calrPerc: this.calories / 2000,
-                carbPerc: this.carb / 300,
-                protPerc: this.pro / 130
+                calrPerc: 3,
+                carbPerc: 8,
+                protPerc: 5
 
             }
         }
@@ -76,6 +76,13 @@ const state = {
 
 const actions = {
     adddmeal: function ({ commit }, meal) {
+        // GET CAL CARB AND PROT STATS FROM STATE.STATS
+        // USe example numbers for now
+        meal.info.calrPerc = ((meal.info.calories / 2000) * 100).toFixed(0)
+        meal.info.carbPerc = ((meal.info.carbs / 300) * 100).toFixed(0)
+        meal.info.protPerc = ((meal.info.prot / 140) * 100).toFixed(0)
+
+        // commit to mutation
         commit('ADD_meal', meal)
         console.log('added ' + meal.name + ' which has calories of ' + meal.info.calories)
     }
@@ -86,12 +93,16 @@ const mutations = {
         state.meals = list
     }, */
     ADD_meal: (state, meal) => {
+        console.log(meal.info.calories + ' is equal to ' + meal.info.calrPerc)
         state.meals.push({
             name: meal.name,
             info: {
                 calories: meal.info.calories,
                 carbs: meal.info.carbs,
-                prot: meal.info.prot
+                prot: meal.info.prot,
+                calrPerc: meal.info.calrPerc,
+                carbPerc: meal.info.carbPerc,
+                protPerc: meal.info.protPerc
             }
         })
     }
