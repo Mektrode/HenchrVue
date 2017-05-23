@@ -15,16 +15,16 @@
                     </md-layout>
                 </md-card-media-cover>
                 <md-layout class="spacy" md-flex="24">
-                    <md-spinner :md-progress=meal.calrPerc></md-spinner>
-                    {{ meal.calrPerc }}% Cal
+                    <md-spinner :md-progress=meal.info.calrPerc></md-spinner>
+                    {{ meal.info.calrPerc }}% Cal
                 </md-layout>
                 <md-layout class="spacy" md-flex="24">
-                    <md-spinner :md-progress="98" class="md-accent">1233asdasd</md-spinner>
-                    {{ meal.calrPerc }}% Pro
+                    <md-spinner :md-progress=meal.info.carbs class="md-accent"></md-spinner>
+                    {{ meal.info.carbPerc }}% Pro
                 </md-layout>
                 <md-layout class="spacy" md-flex="24">
-                    <md-spinner :md-progress="4" class="md-warn"></md-spinner>
-                    {{ meal.calrPerc }}% Carb
+                    <md-spinner :md-progress=meal.info.protPerc class="md-warn"></md-spinner>
+                    {{ meal.info.protPerc }}% Carb
                 </md-layout>
             </md-layout>
         </md-card>

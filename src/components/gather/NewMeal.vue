@@ -3,12 +3,16 @@
         <h1>Add new meal</h1>
         <label>Meal Name:</label>
         <input type="text" v-model="mealName" placeholder="What fufu it now?">
-        <label>Calories (in kJ):</label>
+        <br>
+        <label>Calories (in kCal):</label>
         <input type="number" v-model="mealCal" placeholder="Calories?">
+        <br>
         <label>Carbohydrates (in grams):</label>
         <input type="number" v-model="mealCarb" placeholder="Carbohydrates?">
+        <br>
         <label>Protein (in grams):</label>
         <input type="number" v-model="mealProt" placeholder="Protein?">
+        <br>
         <button type="submit" @click="addameal">Submit</button>
         
     </div>
